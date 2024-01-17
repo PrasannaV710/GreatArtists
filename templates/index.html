@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>
-        Email Spam Classifier
-    </title>
-    <style>
-        body {
-            text-align: center;
-        }
-
-        button {
-            color: aliceblue;
-            background-color: blue;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>Email Spam Classifier</h1>
-    <div>
-        <form method="post" action="/predict">
-            <textarea rows="12" cols="60" name="content" placeholder="Enter your email here"
-                autocomplete="off">{{ email }}</textarea>
-            <div>
-                <button type="submit">
-                    Button
-                </button>
-                <a href="/">Reset</a>
+    <head>
+        <title>Great Artists</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <style>
+            body {
+                background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/2560px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+              }
+        </style>
+        <div class="container col-lg-8">
+            <div style="padding-bottom: 10px">
+                <div class="card text-center bg-light">
+                <font size="5"><b>Great Artists : A Neural Network model that identifies the artist given their art</b></font>
+                <font size="2"><b>Made with &#x1F496; and a lot of coffee by <a href="https://github.com/PrasannaV710">Prasanna Venkatesh</a></b></font>
+                    <div class="card-body" style="padding-bottom: 10px">
+                        <form method="post" action="/predict">
+                            <textarea rows="1" cols="60" name="content" placeholder="Enter the URL of the image here:"
+                                autocomplete="off">{{pic}}</textarea>
+                            <div>
+                                <button type="submit">
+                                Find the Artist
+                                </button>
+                                <a href="/">Reset</a>
+                        <div class="spinner" id="spinner" style="display: none">
+                            <div class="double-bounce1"></div>
+                            <div class="double-bounce2"></div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white" style="padding-top: 10px; padding-right: 10px; padding-bottom: 20px; padding-left: 10px">
+                            <div class="item" id="api_output_1"></div><div class="item" id="api_output_2"></div><br><div class="item" id="api_output_3"></div>
+                    </div>
+                    <div class="card text-left bg-light" style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px">
+                        <font size="4"><b><p align="center">The Model</p></b></font>
+                        <font size="3">
+                        The model was built using a Convolution Neural Network and has been trained to recognize the paintings of the following legends<br><br>
+                        <ul>
+                            <li>Vincent van Gogh: (1853 - 1890), Dutch, [Post-Impressionism]</li>
+                            <li>Edgar Degas: (1834 - 1917), French, [Impressionism]</li>
+                            <li>Pablo Picasso: (1881 - 1973), Spanish, [Cubism]</li>
+                            <li>Pierre-Auguste Renoir: (1841 - 1919), French, [Impressionism]</li>
+                            <li>Albrecht Durer: (1471 - 1528), German, [Northern Renaissance]</li>
+                            <li>Paul Gauguin: (1848 - 1903), French, [Symbolism,Post-Impressionism]</li>
+                            <li>Francisco Goya: (1746 - 1828), Spanish, [Romanticism]</li>
+                            <li>Rembrandt: (1606 - 1669), Dutch, [Baroque]</li>
+                            <li>Alfred Sisley: (1839 - 1899), French,British, [Impressionism]</li>
+                            <li>Titian: (1488 - 1576), Italian, [High Renaissance,Mannerism]</li>
+                            <li>Marc Chagall: (1887 - 1985), French,Jewish,Belarusian, [Primitivism]</li>
+                        </ul>
+                        Thank you for taking the time to check out the website!
+                        </font>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <b>Notes from the developer:</b> For any feedback, comment or suggestion, please feel free to reach out to <a href="mailto:prasannav710@gmail.com">prasannav710@gmail.com</a>.
+                    <div>
+                </div>
             </div>
-        </form>
-    </div>
-    <div>
-        {% print(output_data) %}
-    </div>
-</body>
-
+        </div>
+    </body>
 </html>

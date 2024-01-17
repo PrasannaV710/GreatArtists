@@ -16,8 +16,8 @@ import cv2
 
 def model_predict(input_url):
     # Load TFLite model and allocate tensors.
-    model_lite_path = os.path.join('topartist_rn50.tflite')
-    #model_lite_path = tf.keras.utils.get_file('lite_model_deepartist_rn50.tflite', 'https://www.dropbox.com/s/bodh4db0j1bz8b4/lite_model_deepartist_rn50.tflite?dl=1')
+    #model_lite_path = os.path.join('topartist_rn50.tflite')
+    model_lite_path = tf.keras.utils.get_file('lite_model_deepartist_rn50.tflite', 'https://www.dropbox.com/s/bodh4db0j1bz8b4/lite_model_deepartist_rn50.tflite?dl=1')
     print("Imported the model")
     interpreter = tf.lite.Interpreter(model_path=model_lite_path)
     interpreter.allocate_tensors()
