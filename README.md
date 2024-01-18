@@ -5,6 +5,8 @@ The website is currently hosted on Render.
 Link: https://great-artists.onrender.com/.
 If you do encounter any server errors, please do let me know at prasannav710@gmail.com (Render does not provide much resources in the free tier, and me being a broke college student can't afford to pay for hosting, yet). I will figure out a way to provide a live demo if interested.
 
+![Alt Text](GreatArtists.gif)
+
 The model was built using a Convolution Neural Network and has been trained to recognize the paintings of the following legends:
 
 - Vincent van Gogh: (1853 - 1890), Dutch, (Post-Impressionism)
