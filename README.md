@@ -1,9 +1,12 @@
 # GreatArtists
 Building a Neural Network model to identify the artist given their art.
 
-The website is currently hosted on Render. 
-Link: https://great-artists.onrender.com/.
-If you do encounter any server errors, please do let me know at prasannav710@gmail.com (Render does not provide much resources in the free tier, and me being a broke college student can't afford to pay for hosting, yet). I will figure out a way to provide a live demo if interested.
+The website is currently hosted on Google Cloud (please excuse any delays, I couldn't afford to host it in multiple regions). 
+Link: https://getprediction-qh4erspllq-ue.a.run.app/
+Some sample URLs to test the model: https://www.gpsmycity.com/img/gd/2081.jpg - Made by Titian
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/2560px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg - Made by Vincent Van Gogh
+The Flask app currently only takes in URLs of jpg files. I am working on an update where the app will accept uploaded images in addition to the URLs. Thanks for your patience.
+If you encounter any server errors, please do let me know at prasannav710@gmail.com.
 
 ![Alt Text](GreatArtists.gif)
 
